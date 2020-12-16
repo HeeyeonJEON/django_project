@@ -6,7 +6,7 @@ from django.views import generic
 
 ### Generic View (class-based views)
 class IndexView(generic.ListView):
-    template_name = 'polls/index.html'
+    template_name = 'polls/polls_index.html'
     context_object_name = 'latest_question_list'
 
     """Return the last five published questions."""
@@ -15,11 +15,11 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = 'polls/detail.html'
+    template_name = 'polls/polls_detail.html'
 
 class ResultsView(generic.DetailView):
     model = Question
-    template_name = 'polls/results.html'
+    template_name = 'polls/polls_results.html'
 
 
 def vote(request, question_id):
@@ -28,7 +28,7 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except(KeyError, Choice.DoesNotExist):
         #Redisplay the question voting form
-        return render(request, 'polls/detail.html', {
+        return render(request, 'polls/polls_detail.html', {
         'question':question,
         'error_message': "You didn't select a choice.",
         })

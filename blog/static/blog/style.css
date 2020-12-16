@@ -1,3 +1,12 @@
+title{
+    color: #c80;
+    font-weight: bold;
+}
+
+li a{
+    color: green;
+}
+
 h1 a{
     color: #FCA205;
     font-family: 'Lobster';
