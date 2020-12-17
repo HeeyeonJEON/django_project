@@ -3,12 +3,12 @@
 {% block title %}Detail{% endblock %}
 
 {% block content %}
-
 {{object.site_name}}<br/>
 {{object.url}}
 <p></p>
 
 <a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify</a>
 <a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a>
-
+<p></p>
+<a href="{% url 'bookmark:list' %}">목록화면으로 돌아가기</a>
 {% endblock %}

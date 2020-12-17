@@ -6,8 +6,7 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{%  static 'polls/style.css'  %}">
-</head>
-<body>
+    <h2> 설문조사 </h2> <hr/>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}

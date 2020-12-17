@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
 
-import blog
 
 urlpatterns = [
     path('', include('home.urls')),

@@ -3,11 +3,13 @@
 {% block title %}Bookmark Add{% endblock %}
 
 {% block content %}
-
+<h2> 새로운 북마크를 생성하세요. </h2> <hr>
 <form action="" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="Add" class="btn btn-info btn-sm">
+    <p></p>
+    <a href="{% url 'bookmark:list' %}">목록화면으로 돌아가기</a>
 </form>
 
 {% endblock %}

@@ -3,11 +3,13 @@
 {% block title %}Bookmark Update{% endblock %}
 
 {% block content %}
-
+<h2> 북마크를 수정합니다. </h2> <hr>
 <form action="" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="Update" class="btn btn-info btn-sm">
 </form>
+<p></p>
+<a href="{% url 'bookmark:list' %}">목록화면으로 돌아가기</a>
 
 {% endblock %}

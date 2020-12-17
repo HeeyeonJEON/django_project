@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p!0!_=g!4qdfdg@f4j#e+poo&xkj&8f6&pdq#gx(t1ui5b6@p2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,5 +127,6 @@ STATICFILES_FINDERS=(
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-LOGIN_REDIRECT_URL ='/blog'
+
+LOGIN_REDIRECT_URL = '/blog'
 LOGOUT_REDIRECT_URL = '/blog'
